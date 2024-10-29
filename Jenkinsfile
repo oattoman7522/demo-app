@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Check out') {
             
-             git url: ${git_url}, branch: ${branch_git}, credentialsId: 'git-token'
+             git url: ${git_url}, branch: 'dev', credentialsId: 'test-git'
         }
         
         stage('Docker Login and Pull') {
